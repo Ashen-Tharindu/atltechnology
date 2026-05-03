@@ -1,0 +1,140 @@
+/* Custom CSS & Overrides for ATL Technology Premium Website */
+
+/* Reset & Base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism Header */
+.glass-header {
+    background: rgba(5, 10, 20, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00F0FF;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Custom Selection */
+::selection {
+    background: #00F0FF;
+    color: #050A14;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #00F0FF;
+    color: #050A14;
+    font-weight: 700;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(0, 240, 255, 0.5);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050A14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1F2833;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00F0FF;
+}
+
+/* Utility Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Swiper Adjustments */
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.3) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00F0FF !important;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    width: 24px !important;
+    border-radius: 8px !important;
+    transition: width 0.3s ease;
+}
+
+/* Service Card Glow Effects */
+.service-card {
+    background: linear-gradient(145deg, rgba(10, 17, 34, 1) 0%, rgba(5, 10, 20, 1) 100%);
+}
+
+/* Form Styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #0A1122 inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Initial Hidden States for GSAP */
+.fade-up-element, .gs-reveal-up, .gs-reveal-left, .gs-reveal-right {
+    opacity: 0;
+    visibility: hidden;
+}
