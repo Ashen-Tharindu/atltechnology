@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
         isMenuOpen = !isMenuOpen;
         if (isMenuOpen) {
             mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
             mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
             document.body.style.overflow = 'hidden'; // Prevent scrolling
         } else {
+            mobileMenu.classList.remove('translate-x-0');
             mobileMenu.classList.add('translate-x-full');
             mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
             document.body.style.overflow = '';
@@ -39,34 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // --- Swiper Initialization ---
-    const portfolioSwiper = new Swiper('.portfolio-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-btn-next',
-            prevEl: '.swiper-btn-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
+    if (document.querySelector('.portfolio-swiper') && typeof Swiper !== 'undefined') {
+        const portfolioSwiper = new Swiper('.portfolio-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
             },
-            768: {
-                slidesPerView: 2,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            1024: {
-                slidesPerView: 3,
+            navigation: {
+                nextEl: '.swiper-btn-next',
+                prevEl: '.swiper-btn-prev',
             },
-        }
-    });
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+    }
 
     // --- GSAP Animations ---
     // Register ScrollTrigger

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATL Technology | Innovating the Future of Business</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="ATL Technology is a premium technology agency specializing in high-end Website Development, Custom Software Solutions, AI-Powered Video Marketing, and Mobile Applications.">
@@ -87,13 +88,13 @@
             </nav>
 
             <!-- Mobile Hamburger -->
-            <button class="md:hidden text-2xl text-purewhite focus:outline-none z-50 relative" id="mobile-menu-btn" aria-label="Toggle Menu">
+            <button class="block md:hidden text-2xl text-purewhite focus:outline-none z-[60] relative" id="mobile-menu-btn" aria-label="Toggle Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-500 z-40">
+        <div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-500 z-[50]">
             <a href="index.html" class="mobile-link text-2xl font-heading font-semibold text-cyan transition-colors">Home</a>
             <a href="about.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">About Us</a>
             <a href="services.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Services</a>
@@ -368,7 +369,7 @@
                             <p class="text-light/70 mb-10 text-lg">Ready to start your next big project? Contact us today for a free consultation. Our team is available 24/7 to discuss your technology needs.</p>
                             
                             <div class="space-y-8">
-                                <div class="flex items-center gap-6 group cursor-pointer" onclick="window.open('https://wa.me/94705037724', '_blank')">
+                                <a href="https://wa.me/94705037724" target="_blank" class="flex items-center gap-6 group cursor-pointer w-full text-left">
                                     <div class="w-16 h-16 rounded-full bg-dark flex items-center justify-center border border-cyan/30 text-cyan shrink-0 group-hover:bg-cyan group-hover:text-navy transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
                                         <i class="fa-solid fa-phone text-2xl"></i>
                                     </div>
@@ -376,8 +377,8 @@
                                         <h4 class="text-purewhite font-semibold mb-1 text-lg group-hover:text-cyan transition-colors">Call Us Directly</h4>
                                         <p class="text-light/70">+94 70 503 7724</p>
                                     </div>
-                                </div>
-                                <div class="flex items-center gap-6 group cursor-pointer" onclick="window.location.href='mailto:atltechnology2@gmail.com'">
+                                </a>
+                                <a href="mailto:atltechnology2@gmail.com" class="flex items-center gap-6 group cursor-pointer w-full text-left">
                                     <div class="w-16 h-16 rounded-full bg-dark flex items-center justify-center border border-cyan/30 text-cyan shrink-0 group-hover:bg-cyan group-hover:text-navy transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
                                         <i class="fa-solid fa-envelope text-2xl"></i>
                                     </div>
@@ -385,8 +386,8 @@
                                         <h4 class="text-purewhite font-semibold mb-1 text-lg group-hover:text-cyan transition-colors">Email Address</h4>
                                         <p class="text-light/70">atltechnology2@gmail.com</p>
                                     </div>
-                                </div>
-                                <div class="flex items-center gap-6 group cursor-pointer" onclick="window.open('https://wa.me/94705037724', '_blank')">
+                                </a>
+                                <a href="https://wa.me/94705037724" target="_blank" class="flex items-center gap-6 group cursor-pointer w-full text-left">
                                     <div class="w-16 h-16 rounded-full bg-dark flex items-center justify-center border border-[#25D366]/50 text-[#25D366] shrink-0 group-hover:bg-[#25D366] group-hover:text-purewhite transition-all duration-300 shadow-[0_0_15px_rgba(37,211,102,0.2)]">
                                         <i class="fa-brands fa-whatsapp text-3xl"></i>
                                     </div>
@@ -394,7 +395,7 @@
                                         <h4 class="text-purewhite font-semibold mb-1 text-lg group-hover:text-[#25D366] transition-colors">WhatsApp</h4>
                                         <p class="text-light/70">Chat with us instantly</p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -404,11 +405,11 @@
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div class="form-group">
                                         <label for="name" class="block text-sm font-medium text-light/80 mb-2">Full Name</label>
-                                        <input type="text" id="name" class="w-full bg-dark border border-light/10 rounded-lg px-4 py-3 text-purewhite focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-all" placeholder="John Doe" required>
+                                        <input type="text" id="name" autocomplete="name" class="w-full bg-dark border border-light/10 rounded-lg px-4 py-3 text-purewhite focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-all" placeholder="John Doe" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class="block text-sm font-medium text-light/80 mb-2">Email Address</label>
-                                        <input type="email" id="email" class="w-full bg-dark border border-light/10 rounded-lg px-4 py-3 text-purewhite focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-all" placeholder="john@example.com" required>
+                                        <input type="email" id="email" autocomplete="email" class="w-full bg-dark border border-light/10 rounded-lg px-4 py-3 text-purewhite focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan transition-all" placeholder="john@example.com" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -506,7 +507,7 @@
     </footer>
 
     <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-[99]">
         <!-- WhatsApp -->
         <a href="https://wa.me/94705037724" target="_blank" class="w-14 h-14 rounded-full bg-[#25D366] text-purewhite flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="WhatsApp Chat">
             <i class="fa-brands fa-whatsapp"></i>
