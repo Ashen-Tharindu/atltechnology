@@ -75,25 +75,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hero Section Initial Load Animation
     const heroTl = gsap.timeline();
     
-    // Select hero elements and make them visible for animation
-    gsap.set(".fade-up-element", { autoAlpha: 1 });
-    
     heroTl.fromTo(".fade-up-element", 
-        { y: 50, opacity: 0 }, 
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }
+        { y: 50, autoAlpha: 0 }, 
+        { y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }
     );
 
     // Scroll Reveal Animations for sections
     
     // Reveal Up
     gsap.utils.toArray('.gs-reveal-up').forEach(function(elem) {
-        gsap.set(elem, { autoAlpha: 1 }); // Prep for animation
         ScrollTrigger.create({
             trigger: elem,
             start: "top 85%",
             animation: gsap.fromTo(elem, 
-                { y: 50, opacity: 0 }, 
-                { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+                { y: 50, autoAlpha: 0 }, 
+                { y: 0, autoAlpha: 1, duration: 1, ease: "power3.out" }
             ),
             toggleActions: "play none none reverse"
         });
@@ -101,13 +97,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Reveal Left
     gsap.utils.toArray('.gs-reveal-left').forEach(function(elem) {
-        gsap.set(elem, { autoAlpha: 1 });
         ScrollTrigger.create({
             trigger: elem,
             start: "top 85%",
             animation: gsap.fromTo(elem, 
-                { x: -50, opacity: 0 }, 
-                { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+                { x: -50, autoAlpha: 0 }, 
+                { x: 0, autoAlpha: 1, duration: 1, ease: "power3.out" }
             ),
             toggleActions: "play none none reverse"
         });
@@ -115,13 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Reveal Right
     gsap.utils.toArray('.gs-reveal-right').forEach(function(elem) {
-        gsap.set(elem, { autoAlpha: 1 });
         ScrollTrigger.create({
             trigger: elem,
             start: "top 85%",
             animation: gsap.fromTo(elem, 
-                { x: 50, opacity: 0 }, 
-                { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+                { x: 50, autoAlpha: 0 }, 
+                { x: 0, autoAlpha: 1, duration: 1, ease: "power3.out" }
             ),
             toggleActions: "play none none reverse"
         });
@@ -237,13 +231,41 @@ document.addEventListener("DOMContentLoaded", () => {
         animateParticles();
     }
 
-    // Contact Form Submission Prevent Default
+    // --- Parallax Effect ---
+    gsap.utils.toArray('.parallax-bg').forEach(function(elem) {
+        const speed = elem.getAttribute('data-speed') || 0.5;
+        gsap.to(elem, {
+            yPercent: 30 * speed,
+            ease: "none",
+            scrollTrigger: {
+                trigger: elem.parentElement,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+    });
+
+    // Contact Form Submission to WhatsApp
     const contactForm = document.getElementById('contactForm');
     if(contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Just show a simple alert for demo purposes
-            alert('Thank you for reaching out to ATL Technology! We have received your message and will get back to you shortly.');
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Format WhatsApp Message
+            const waPhone = "94705037724";
+            const waText = `*New Inquiry from ATL Technology Website*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Interested Service:* ${encodeURIComponent(service)}%0A*Message:* ${encodeURIComponent(message)}`;
+            
+            // Open WhatsApp in new tab
+            window.open(`https://wa.me/${waPhone}?text=${waText}`, '_blank');
+            
+            // Reset form
             contactForm.reset();
         });
     }

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ATL Technology</title>
+    
+    <meta name="description" content="Learn more about ATL Technology, a premium technology agency specializing in software solutions.">
+    <meta name="author" content="ATL Technology">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' https: data:;">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#050A14',
+                        dark: '#0A1122',
+                        cyan: '#00F0FF',
+                        accent: '#0080FF',
+                        light: '#E0E5EC',
+                        purewhite: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-navy text-light font-sans overflow-x-hidden antialiased pt-20">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2 bg-navy/90 backdrop-blur-md border-b border-light/5" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="ATL Technology Logo" class="h-14 w-auto transition-transform duration-300 group-hover:scale-110 object-contain">
+                <span class="font-heading font-bold text-2xl text-purewhite tracking-wider"><span class="text-cyan">ATL</span> TECHNOLOGY</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Home</a>
+                <a href="about.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative text-cyan">About Us</a>
+                <a href="services.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Services</a>
+                <a href="portfolio.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Portfolio</a>
+                <a href="contact.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Contact Us</a>
+                <a href="contact.html" class="px-6 py-2 rounded-full border border-cyan/50 text-cyan hover:bg-cyan hover:text-navy font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]">Get a Quote</a>
+            </nav>
+            <button class="md:hidden text-2xl text-purewhite focus:outline-none z-50 relative" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-500 z-40">
+            <a href="index.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Home</a>
+            <a href="about.html" class="mobile-link text-2xl font-heading font-semibold text-cyan transition-colors">About Us</a>
+            <a href="services.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Services</a>
+            <a href="portfolio.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Portfolio</a>
+            <a href="contact.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Contact Us</a>
+            <a href="contact.html" class="mobile-link text-2xl font-heading font-semibold text-cyan">Get a Quote</a>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <!-- Page Header -->
+        <section class="py-20 relative bg-dark border-b border-light/5">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-screen"></div>
+            <div class="container mx-auto px-6 text-center relative z-10 fade-up-element">
+                <h1 class="text-5xl md:text-6xl font-heading font-black text-purewhite mb-4">About <span class="text-cyan">Us</span></h1>
+                <p class="text-light/70 text-lg max-w-2xl mx-auto">Discover the passion, the people, and the vision driving the future of business.</p>
+            </div>
+        </section>
+
+        <!-- About Us Extended Section -->
+        <section class="py-24 relative">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16 mb-20">
+                    <div class="lg:w-1/2 gs-reveal-left">
+                        <h2 class="text-cyan font-semibold tracking-wider uppercase mb-2">Our Story</h2>
+                        <h3 class="text-4xl md:text-5xl font-heading font-bold text-purewhite mb-6 leading-tight">
+                            Redefining the <span class="border-b-4 border-cyan pb-1">Digital Landscape</span>
+                        </h3>
+                        <p class="text-light/80 mb-6 text-lg leading-relaxed">
+                            At ATL Technology, we don't just build software; we engineer the future. Founded on the principle that aesthetic brilliance and technical supremacy should go hand in hand, we set out to create digital experiences that truly wow users while performing flawlessly at scale.
+                        </p>
+                        <p class="text-light/80 mb-8 text-lg leading-relaxed">
+                            Our team of elite developers, top-tier designers, and AI specialists are dedicated to transforming your vision into reality. We believe in high standards, fast delivery, and unbreakable security.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-dark flex items-center justify-center border border-cyan/20 shadow-[0_0_15px_rgba(0,240,255,0.1)] glow-on-hover">
+                                    <i class="fa-solid fa-rocket text-cyan text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-purewhite">Fast Delivery</h4>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-dark flex items-center justify-center border border-cyan/20 shadow-[0_0_15px_rgba(0,240,255,0.1)] glow-on-hover">
+                                    <i class="fa-solid fa-shield-halved text-cyan text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-purewhite">High Security</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative gs-reveal-right">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan to-accent rounded-2xl blur-xl opacity-20 transform rotate-3"></div>
+                        <div class="relative bg-dark p-2 rounded-2xl border border-cyan/20 overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" alt="ATL Technology Team" class="w-full h-[500px] object-cover rounded-xl transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0">
+                            <div class="absolute bottom-8 left-8 bg-navy/80 backdrop-blur-md p-6 rounded-xl border border-cyan/30 shadow-[0_0_20px_rgba(0,240,255,0.4)] flex items-center gap-4 animate-[bounce_3s_infinite]">
+                                <div class="text-cyan text-4xl font-black font-heading">5+</div>
+                                <div class="text-sm font-medium uppercase tracking-wide">Years of <br>Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Values -->
+                <div class="text-center max-w-3xl mx-auto mb-16 gs-reveal-up">
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-purewhite mb-6">Our Core Values</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gs-reveal-up">
+                    <div class="bg-dark/50 border border-light/10 p-8 rounded-2xl hover:border-cyan/50 transition-all duration-300">
+                        <i class="fa-solid fa-gem text-4xl text-cyan mb-6"></i>
+                        <h4 class="text-xl font-heading font-bold text-purewhite mb-4">Premium Quality</h4>
+                        <p class="text-light/70">We never settle for "good enough". Every line of code and every pixel is crafted to absolute perfection.</p>
+                    </div>
+                    <div class="bg-dark/50 border border-light/10 p-8 rounded-2xl hover:border-accent/50 transition-all duration-300">
+                        <i class="fa-solid fa-lightbulb text-4xl text-accent mb-6"></i>
+                        <h4 class="text-xl font-heading font-bold text-purewhite mb-4">Innovation First</h4>
+                        <p class="text-light/70">Always staying ahead of the curve, utilizing AI, modern frameworks, and futuristic design systems.</p>
+                    </div>
+                    <div class="bg-dark/50 border border-light/10 p-8 rounded-2xl hover:border-cyan/50 transition-all duration-300">
+                        <i class="fa-solid fa-handshake text-4xl text-cyan mb-6"></i>
+                        <h4 class="text-xl font-heading font-bold text-purewhite mb-4">Client Partnership</h4>
+                        <p class="text-light/70">Your success is our success. We work closely with you as strategic technology partners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#03060A] pt-20 pb-10 border-t border-light/5 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan/5 blur-[150px] rounded-full pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <img src="assets/images/logo.png" alt="ATL Technology" class="h-14 w-auto object-contain">
+                        <span class="font-heading font-bold text-2xl text-purewhite tracking-wider"><span class="text-cyan">ATL</span> TECHNOLOGY</span>
+                    </a>
+                    <p class="text-light/60 text-sm leading-relaxed mb-6">Innovating the Future of Business with premium tech solutions. We build digital experiences that drive growth.</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/profile.php?id=61560537689898" target="_blank" class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-light/80 hover:bg-cyan hover:text-navy transition-all duration-300 border border-light/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/94705037724" target="_blank" class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-light/80 hover:bg-[#25D366] hover:text-purewhite transition-all duration-300 border border-light/10 hover:shadow-[0_0_15px_rgba(37,211,102,0.4)]"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-purewhite font-heading font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+                        <li><a href="about.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
+                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+                        <li><a href="portfolio.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Portfolio</a></li>
+                        <li><a href="contact.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-purewhite font-heading font-bold text-lg mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Web Development</a></li>
+                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Software Solutions</a></li>
+                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> SEO Optimization</a></li>
+                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> AI Add-Video</a></li>
+                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Mobile Apps</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-purewhite font-heading font-bold text-lg mb-6">Connect With Us</h4>
+                    <a href="https://www.facebook.com/profile.php?id=61560537689898" target="_blank" class="block bg-dark border border-light/10 p-4 rounded-xl mb-4 hover:border-cyan/50 transition-all duration-300 group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#1877F2] to-cyan rounded-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-facebook-f text-purewhite text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-purewhite text-sm font-semibold">ATL Technology</p>
+                                <p class="text-light/50 text-xs">Join our community</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-light/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-light/50 text-sm">© 2026 ATL Technology. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="https://wa.me/94705037724" target="_blank" class="text-cyan font-semibold hover:text-purewhite text-sm transition-colors tracking-wide">Developed by ATL Technology</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <a href="https://wa.me/94705037724" target="_blank" class="w-14 h-14 rounded-full bg-[#25D366] text-purewhite flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="WhatsApp Chat">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
