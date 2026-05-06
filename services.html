@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | ATL Technology</title>
-    
-    <meta name="description" content="Explore the premium technology services offered by ATL Technology including Web Development, Software Solutions, SEO Optimization, and more.">
+
+    <meta name="description"
+        content="Explore the premium technology services offered by ATL Technology including Web Development, Software Solutions, SEO Optimization, and more.">
     <meta name="author" content="ATL Technology">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' https: data:;">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; img-src 'self' https: data:;">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,133 +43,208 @@
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-navy text-light font-sans overflow-x-hidden antialiased pt-20">
-    
+
+<body class="bg-navy text-light font-sans antialiased pt-20">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2 bg-navy/90 backdrop-blur-md border-b border-light/5" id="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="assets/images/logo.png" alt="ATL Technology Logo" class="h-14 w-auto transition-transform duration-300 group-hover:scale-110 object-contain">
-                <span class="font-heading font-bold text-2xl text-purewhite tracking-wider"><span class="text-cyan">ATL</span> TECHNOLOGY</span>
+    <header
+        class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-2 bg-navy border-b border-light/10"
+        id="navbar">
+        <div class="container mx-auto px-4 md:px-6 py-2 md:py-4 flex justify-between items-center relative z-40">
+            <a href="index.html" class="flex items-center gap-2 md:gap-3 group">
+                <img src="assets/images/logo.png" alt="ATL Technology Logo"
+                    class="h-10 md:h-14 w-auto transition-transform duration-300 group-hover:scale-110 object-contain">
+                <span class="font-heading font-bold text-xl md:text-2xl text-purewhite tracking-wider"><span
+                        class="text-cyan">ATL</span> TECHNOLOGY</span>
             </a>
+
             <nav class="hidden md:flex gap-8 items-center">
-                <a href="index.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Home</a>
-                <a href="about.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">About Us</a>
-                <a href="services.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative text-cyan">Services</a>
-                <a href="portfolio.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Portfolio</a>
-                <a href="contact.html" class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Contact Us</a>
-                <a href="contact.html" class="px-6 py-2 rounded-full border border-cyan/50 text-cyan hover:bg-cyan hover:text-navy font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]">Get a Quote</a>
+                <a href="index.html"
+                    class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative text-cyan">Home</a>
+                <a href="about.html"
+                    class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">About Us</a>
+                <a href="services.html"
+                    class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Services</a>
+                <a href="portfolio.html"
+                    class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Portfolio</a>
+                <a href="contact.html"
+                    class="nav-link font-medium hover:text-cyan transition-colors duration-300 relative">Contact Us</a>
+                <a href="contact.html"
+                    class="px-6 py-2 rounded-full border border-cyan/50 text-cyan hover:bg-cyan hover:text-navy font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.2)]">Get
+                    a Quote</a>
             </nav>
-            <button class="md:hidden text-2xl text-purewhite focus:outline-none z-50 relative" id="mobile-menu-btn">
+
+            <button class="block md:hidden text-3xl text-purewhite focus:outline-none z-[60] relative p-2"
+                id="mobile-menu-btn" aria-label="Toggle Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-
-        <div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-500 z-40">
-            <a href="index.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Home</a>
-            <a href="about.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">About Us</a>
-            <a href="services.html" class="mobile-link text-2xl font-heading font-semibold text-cyan transition-colors">Services</a>
-            <a href="portfolio.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Portfolio</a>
-            <a href="contact.html" class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors">Contact Us</a>
-            <a href="contact.html" class="mobile-link text-2xl font-heading font-semibold text-cyan">Get a Quote</a>
-        </div>
     </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 w-full h-[100dvh] bg-navy flex flex-col justify-center items-center gap-8 translate-x-full transition-transform duration-300 z-50">
+        <a href="index.html"
+            class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors text-purewhite">Home</a>
+        <a href="about.html"
+            class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors text-purewhite">About
+            Us</a>
+        <a href="services.html"
+            class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors text-purewhite">Services</a>
+        <a href="portfolio.html"
+            class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors text-purewhite">Portfolio</a>
+        <a href="contact.html"
+            class="mobile-link text-2xl font-heading font-semibold hover:text-cyan transition-colors text-purewhite">Contact
+            Us</a>
+        <a href="contact.html"
+            class="mobile-link text-xl font-heading font-semibold text-[#050A14] bg-cyan border border-cyan px-8 py-3 rounded-full mt-4">Get
+            a Quote</a>
+    </div>
 
     <main class="min-h-screen">
         <!-- Page Header -->
-        <section class="py-20 relative bg-dark border-b border-light/5">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-screen"></div>
-            <div class="container mx-auto px-6 text-center relative z-10 fade-up-element">
-                <h1 class="text-5xl md:text-6xl font-heading font-black text-purewhite mb-4">Our <span class="text-cyan">Expertise</span></h1>
-                <p class="text-light/70 text-lg max-w-2xl mx-auto">We offer end-to-end technology solutions tailored for enterprises demanding perfection, innovation, and scalability.</p>
+        <section class="py-12 md:py-20 relative bg-dark border-b border-light/5">
+            <div
+                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-screen">
+            </div>
+            <div class="container mx-auto px-4 md:px-6 text-center relative z-10 fade-up-element">
+                <h1 class="text-4xl md:text-6xl font-heading font-black text-purewhite mb-4 break-words">Our <span
+                        class="text-cyan">Expertise</span></h1>
+                <p class="text-light/70 text-lg max-w-2xl mx-auto">We offer end-to-end technology solutions tailored for
+                    enterprises demanding perfection, innovation, and scalability.</p>
             </div>
         </section>
 
         <!-- Detailed Services Grid -->
-        <section class="py-24 relative bg-dark/50">
+        <section class="py-12 md:py-24 relative bg-dark/50">
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent rounded-full blur-[150px] opacity-10"></div>
             <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan rounded-full blur-[150px] opacity-10"></div>
 
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Web Development -->
-                    <div class="group bg-navy border border-light/10 p-10 rounded-2xl hover:border-cyan/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,240,255,0.3)] service-card">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        <div class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-cyan/30 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300">
-                            <i class="fa-solid fa-laptop-code text-3xl text-purewhite group-hover:text-cyan transition-colors"></i>
+                    <div
+                        class="group bg-navy border border-light/10 p-6 md:p-10 rounded-2xl hover:border-cyan/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,240,255,0.3)] service-card">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-cyan/30 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300">
+                            <i
+                                class="fa-solid fa-laptop-code text-3xl text-purewhite group-hover:text-cyan transition-colors"></i>
                         </div>
                         <h4 class="text-2xl font-heading font-bold text-purewhite mb-4">Web Development</h4>
-                        <p class="text-light/70 leading-relaxed mb-6">Responsive, conversion-optimized, and visually breathtaking custom websites built with modern frameworks to ensure lightning-fast speeds.</p>
+                        <p class="text-light/70 leading-relaxed mb-6">Responsive, conversion-optimized, and visually
+                            breathtaking custom websites built with modern frameworks to ensure lightning-fast speeds.
+                        </p>
                         <ul class="space-y-2 mb-8 text-sm text-light/60">
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> Custom UI/UX Design</li>
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> Modern Tech Stack (React, Next.js)</li>
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> E-commerce Solutions</li>
                         </ul>
-                        <a href="contact.html" class="inline-flex items-center text-cyan font-medium group-hover:tracking-wide transition-all">Get Started <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="contact.html"
+                            class="inline-flex items-center text-cyan font-medium group-hover:tracking-wide transition-all">Get
+                            Started <i
+                                class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
 
                     <!-- Software Solution -->
-                    <div class="group bg-navy border border-light/10 p-10 rounded-2xl hover:border-accent/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,128,255,0.3)] service-card" style="transition-delay: 0.1s">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        <div class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-accent/30 group-hover:shadow-[0_0_20px_rgba(0,128,255,0.4)] transition-all duration-300">
-                            <i class="fa-solid fa-layer-group text-3xl text-purewhite group-hover:text-accent transition-colors"></i>
+                    <div class="group bg-navy border border-light/10 p-6 md:p-10 rounded-2xl hover:border-accent/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,128,255,0.3)] service-card"
+                        style="transition-delay: 0.1s">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-accent/30 group-hover:shadow-[0_0_20px_rgba(0,128,255,0.4)] transition-all duration-300">
+                            <i
+                                class="fa-solid fa-layer-group text-3xl text-purewhite group-hover:text-accent transition-colors"></i>
                         </div>
                         <h4 class="text-2xl font-heading font-bold text-purewhite mb-4">Software Solution</h4>
-                        <p class="text-light/70 leading-relaxed mb-6">Custom SaaS applications, ERP systems, and robust software architecture designed to streamline operations and maximize ROI.</p>
+                        <p class="text-light/70 leading-relaxed mb-6">Custom SaaS applications, ERP systems, and robust
+                            software architecture designed to streamline operations and maximize ROI.</p>
                         <ul class="space-y-2 mb-8 text-sm text-light/60">
                             <li><i class="fa-solid fa-check text-accent mr-2"></i> Enterprise Resource Planning</li>
                             <li><i class="fa-solid fa-check text-accent mr-2"></i> SaaS Architecture</li>
                             <li><i class="fa-solid fa-check text-accent mr-2"></i> Secure API Integrations</li>
                         </ul>
-                        <a href="contact.html" class="inline-flex items-center text-accent font-medium group-hover:tracking-wide transition-all">Get Started <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="contact.html"
+                            class="inline-flex items-center text-accent font-medium group-hover:tracking-wide transition-all">Get
+                            Started <i
+                                class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
 
                     <!-- SEO Optimization -->
-                    <div class="group bg-navy border border-light/10 p-10 rounded-2xl hover:border-cyan/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,240,255,0.3)] service-card" style="transition-delay: 0.2s">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        <div class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-cyan/30 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300">
-                            <i class="fa-solid fa-chart-line text-3xl text-purewhite group-hover:text-cyan transition-colors"></i>
+                    <div class="group bg-navy border border-light/10 p-6 md:p-10 rounded-2xl hover:border-cyan/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,240,255,0.3)] service-card"
+                        style="transition-delay: 0.2s">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-cyan/30 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300">
+                            <i
+                                class="fa-solid fa-chart-line text-3xl text-purewhite group-hover:text-cyan transition-colors"></i>
                         </div>
                         <h4 class="text-2xl font-heading font-bold text-purewhite mb-4">SEO Optimization</h4>
-                        <p class="text-light/70 leading-relaxed mb-6">Dominate search engine rankings with our data-driven SEO strategies, ensuring maximum visibility and high-quality organic traffic.</p>
+                        <p class="text-light/70 leading-relaxed mb-6">Dominate search engine rankings with our
+                            data-driven SEO strategies, ensuring maximum visibility and high-quality organic traffic.
+                        </p>
                         <ul class="space-y-2 mb-8 text-sm text-light/60">
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> Technical SEO Audits</li>
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> Keyword Dominance</li>
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> Speed Optimization</li>
                         </ul>
-                        <a href="contact.html" class="inline-flex items-center text-cyan font-medium group-hover:tracking-wide transition-all">Get Started <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="contact.html"
+                            class="inline-flex items-center text-cyan font-medium group-hover:tracking-wide transition-all">Get
+                            Started <i
+                                class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
 
                     <!-- AI Add-Video -->
-                    <div class="group bg-navy border border-light/10 p-10 rounded-2xl hover:border-accent/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,128,255,0.3)] service-card">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        <div class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-accent/30 group-hover:shadow-[0_0_20px_rgba(0,128,255,0.4)] transition-all duration-300">
-                            <i class="fa-solid fa-brain text-3xl text-purewhite group-hover:text-accent transition-colors"></i>
+                    <div
+                        class="group bg-navy border border-light/10 p-6 md:p-10 rounded-2xl hover:border-accent/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,128,255,0.3)] service-card">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-accent/30 group-hover:shadow-[0_0_20px_rgba(0,128,255,0.4)] transition-all duration-300">
+                            <i
+                                class="fa-solid fa-brain text-3xl text-purewhite group-hover:text-accent transition-colors"></i>
                         </div>
                         <h4 class="text-2xl font-heading font-bold text-purewhite mb-4">AI Add-Video</h4>
-                        <p class="text-light/70 leading-relaxed mb-6">Cutting-edge AI-powered video marketing solutions. Generate highly engaging, personalized content dynamically to skyrocket user retention.</p>
+                        <p class="text-light/70 leading-relaxed mb-6">Cutting-edge AI-powered video marketing solutions.
+                            Generate highly engaging, personalized content dynamically to skyrocket user retention.</p>
                         <ul class="space-y-2 mb-8 text-sm text-light/60">
                             <li><i class="fa-solid fa-check text-accent mr-2"></i> Automated Generation</li>
                             <li><i class="fa-solid fa-check text-accent mr-2"></i> Personalization at Scale</li>
                             <li><i class="fa-solid fa-check text-accent mr-2"></i> High Conversion Rates</li>
                         </ul>
-                        <a href="contact.html" class="inline-flex items-center text-accent font-medium group-hover:tracking-wide transition-all">Get Started <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="contact.html"
+                            class="inline-flex items-center text-accent font-medium group-hover:tracking-wide transition-all">Get
+                            Started <i
+                                class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
 
                     <!-- Mobile Applications -->
-                    <div class="group bg-navy border border-light/10 p-10 rounded-2xl hover:border-cyan/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,240,255,0.3)] service-card" style="transition-delay: 0.1s">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                        <div class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-cyan/30 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300">
-                            <i class="fa-solid fa-mobile-screen text-3xl text-purewhite group-hover:text-cyan transition-colors"></i>
+                    <div class="group bg-navy border border-light/10 p-6 md:p-10 rounded-2xl hover:border-cyan/50 transition-all duration-500 relative overflow-hidden gs-reveal-up transform hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,240,255,0.3)] service-card"
+                        style="transition-delay: 0.1s">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-xl bg-dark flex items-center justify-center mb-6 border border-light/5 group-hover:border-cyan/30 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300">
+                            <i
+                                class="fa-solid fa-mobile-screen text-3xl text-purewhite group-hover:text-cyan transition-colors"></i>
                         </div>
                         <h4 class="text-2xl font-heading font-bold text-purewhite mb-4">Mobile Applications</h4>
-                        <p class="text-light/70 leading-relaxed mb-6">Native and cross-platform mobile apps for iOS and Android. Flawless UI/UX combined with robust backend integrations.</p>
+                        <p class="text-light/70 leading-relaxed mb-6">Native and cross-platform mobile apps for iOS and
+                            Android. Flawless UI/UX combined with robust backend integrations.</p>
                         <ul class="space-y-2 mb-8 text-sm text-light/60">
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> React Native / Flutter</li>
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> iOS & Android Native</li>
                             <li><i class="fa-solid fa-check text-cyan mr-2"></i> Scalable Backend Sync</li>
                         </ul>
-                        <a href="contact.html" class="inline-flex items-center text-cyan font-medium group-hover:tracking-wide transition-all">Get Started <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
+                        <a href="contact.html"
+                            class="inline-flex items-center text-cyan font-medium group-hover:tracking-wide transition-all">Get
+                            Started <i
+                                class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i></a>
                     </div>
                 </div>
             </div>
@@ -174,45 +254,74 @@
 
     <!-- Footer -->
     <footer class="bg-[#03060A] pt-20 pb-10 border-t border-light/5 relative overflow-hidden">
-        <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan/5 blur-[150px] rounded-full pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-cyan/5 blur-[150px] rounded-full pointer-events-none">
+        </div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:p-12 mb-8 md:mb-16">
                 <div class="col-span-1 lg:col-span-1">
                     <a href="index.html" class="flex items-center gap-3 mb-6">
                         <img src="assets/images/logo.png" alt="ATL Technology" class="h-14 w-auto object-contain">
-                        <span class="font-heading font-bold text-2xl text-purewhite tracking-wider"><span class="text-cyan">ATL</span> TECHNOLOGY</span>
+                        <span class="font-heading font-bold text-2xl text-purewhite tracking-wider"><span
+                                class="text-cyan">ATL</span> TECHNOLOGY</span>
                     </a>
-                    <p class="text-light/60 text-sm leading-relaxed mb-6">Innovating the Future of Business with premium tech solutions. We build digital experiences that drive growth.</p>
+                    <p class="text-light/60 text-sm leading-relaxed mb-6">Innovating the Future of Business with premium
+                        tech solutions. We build digital experiences that drive growth.</p>
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/profile.php?id=61560537689898" target="_blank" class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-light/80 hover:bg-cyan hover:text-navy transition-all duration-300 border border-light/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://wa.me/94705037724" target="_blank" class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-light/80 hover:bg-[#25D366] hover:text-purewhite transition-all duration-300 border border-light/10 hover:shadow-[0_0_15px_rgba(37,211,102,0.4)]"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61560537689898" target="_blank"
+                            class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-light/80 hover:bg-cyan hover:text-navy transition-all duration-300 border border-light/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/94705037724" target="_blank"
+                            class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-light/80 hover:bg-[#25D366] hover:text-purewhite transition-all duration-300 border border-light/10 hover:shadow-[0_0_15px_rgba(37,211,102,0.4)]"><i
+                                class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-purewhite font-heading font-bold text-lg mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
-                        <li><a href="about.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
-                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
-                        <li><a href="portfolio.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Portfolio</a></li>
-                        <li><a href="contact.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Contact Us</a></li>
+                        <li><a href="index.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+                        <li><a href="about.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
+                        <li><a href="services.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Portfolio</a></li>
+                        <li><a href="contact.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-purewhite font-heading font-bold text-lg mb-6">Our Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Web Development</a></li>
-                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Software Solutions</a></li>
-                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> SEO Optimization</a></li>
-                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> AI Add-Video</a></li>
-                        <li><a href="services.html" class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Mobile Apps</a></li>
+                        <li><a href="services.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Web Development</a></li>
+                        <li><a href="services.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Software Solutions</a></li>
+                        <li><a href="services.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> SEO Optimization</a></li>
+                        <li><a href="services.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> AI Add-Video</a></li>
+                        <li><a href="services.html"
+                                class="text-light/60 hover:text-cyan text-sm transition-colors flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Mobile Apps</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-purewhite font-heading font-bold text-lg mb-6">Connect With Us</h4>
-                    <a href="https://www.facebook.com/profile.php?id=61560537689898" target="_blank" class="block bg-dark border border-light/10 p-4 rounded-xl mb-4 hover:border-cyan/50 transition-all duration-300 group">
+                    <a href="https://www.facebook.com/profile.php?id=61560537689898" target="_blank"
+                        class="block bg-dark border border-light/10 p-4 rounded-xl mb-4 hover:border-cyan/50 transition-all duration-300 group">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#1877F2] to-cyan rounded-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-[#1877F2] to-cyan rounded-md flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                                 <i class="fa-brands fa-facebook-f text-purewhite text-2xl"></i>
                             </div>
                             <div>
@@ -226,15 +335,19 @@
             <div class="border-t border-light/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-light/50 text-sm">© 2026 ATL Technology. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="https://wa.me/94705037724" target="_blank" class="text-cyan font-semibold hover:text-purewhite text-sm transition-colors tracking-wide">Developed by ATL Technology</a>
+                    <a href="https://wa.me/94705037724" target="_blank"
+                        class="text-cyan font-semibold hover:text-purewhite text-sm transition-colors tracking-wide">Developed
+                        by ATL Technology</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Action -->
-    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-        <a href="https://wa.me/94705037724" target="_blank" class="w-14 h-14 rounded-full bg-[#25D366] text-purewhite flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 animate-bounce" aria-label="WhatsApp Chat">
+    <div class="fixed bottom-8 right-6 flex flex-col gap-3 z-50">
+        <a href="https://wa.me/94705037724" target="_blank"
+            class="w-14 h-14 rounded-full bg-[#25D366] text-purewhite flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 animate-bounce"
+            aria-label="WhatsApp Chat">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
@@ -243,4 +356,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

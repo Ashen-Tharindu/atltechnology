@@ -11,16 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
             mobileMenu.classList.remove('translate-x-full');
             mobileMenu.classList.add('translate-x-0');
             mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
         } else {
             mobileMenu.classList.remove('translate-x-0');
             mobileMenu.classList.add('translate-x-full');
             mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            document.body.style.overflow = '';
+            document.body.style.overflow = ''; // Allow scrolling again
         }
     }
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+    }
 
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const portfolioSwiper = new Swiper('.portfolio-swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
-            loop: true,
+            loop: false,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
@@ -78,21 +80,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Hero Section Initial Load Animation
     const heroTl = gsap.timeline();
-    
-    heroTl.fromTo(".fade-up-element", 
-        { y: 50, autoAlpha: 0 }, 
+
+    heroTl.fromTo(".fade-up-element",
+        { y: 50, autoAlpha: 0 },
         { y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }
     );
 
     // Scroll Reveal Animations for sections
-    
+
     // Reveal Up
-    gsap.utils.toArray('.gs-reveal-up').forEach(function(elem) {
+    gsap.utils.toArray('.gs-reveal-up').forEach(function (elem) {
         ScrollTrigger.create({
             trigger: elem,
             start: "top 85%",
-            animation: gsap.fromTo(elem, 
-                { y: 50, autoAlpha: 0 }, 
+            animation: gsap.fromTo(elem,
+                { y: 50, autoAlpha: 0 },
                 { y: 0, autoAlpha: 1, duration: 1, ease: "power3.out" }
             ),
             toggleActions: "play none none reverse"
@@ -100,12 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Reveal Left
-    gsap.utils.toArray('.gs-reveal-left').forEach(function(elem) {
+    gsap.utils.toArray('.gs-reveal-left').forEach(function (elem) {
         ScrollTrigger.create({
             trigger: elem,
             start: "top 85%",
-            animation: gsap.fromTo(elem, 
-                { x: -50, autoAlpha: 0 }, 
+            animation: gsap.fromTo(elem,
+                { x: -50, autoAlpha: 0 },
                 { x: 0, autoAlpha: 1, duration: 1, ease: "power3.out" }
             ),
             toggleActions: "play none none reverse"
@@ -113,12 +115,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Reveal Right
-    gsap.utils.toArray('.gs-reveal-right').forEach(function(elem) {
+    gsap.utils.toArray('.gs-reveal-right').forEach(function (elem) {
         ScrollTrigger.create({
             trigger: elem,
             start: "top 85%",
-            animation: gsap.fromTo(elem, 
-                { x: 50, autoAlpha: 0 }, 
+            animation: gsap.fromTo(elem,
+                { x: 50, autoAlpha: 0 },
                 { x: 0, autoAlpha: 1, duration: 1, ease: "power3.out" }
             ),
             toggleActions: "play none none reverse"
@@ -127,21 +129,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Counter Animation ---
     const counters = document.querySelectorAll('.counter');
-    
+
     ScrollTrigger.create({
         trigger: "#stats-container",
         start: "top 80%",
         onEnter: () => {
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
-                
+
                 // Animate value
                 gsap.to(counter, {
                     innerHTML: target,
                     duration: 2.5,
                     ease: "power2.out",
                     snap: { innerHTML: 1 },
-                    onUpdate: function() {
+                    onUpdate: function () {
                         counter.innerHTML = Math.round(this.targets()[0].innerHTML);
                     }
                 });
@@ -207,17 +209,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function animateParticles() {
             ctx.clearRect(0, 0, width, height);
-            
+
             for (let i = 0; i < particles.length; i++) {
                 particles[i].update();
                 particles[i].draw();
-                
+
                 // Draw lines
                 for (let j = i; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-                    
+
                     if (distance < config.lineDistance) {
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -236,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- Parallax Effect ---
-    gsap.utils.toArray('.parallax-bg').forEach(function(elem) {
+    gsap.utils.toArray('.parallax-bg').forEach(function (elem) {
         const speed = elem.getAttribute('data-speed') || 0.5;
         gsap.to(elem, {
             yPercent: 30 * speed,
@@ -252,23 +254,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Contact Form Submission to WhatsApp
     const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
+    if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
-            
+
             // Format WhatsApp Message
             const waPhone = "94705037724";
             const waText = `*New Inquiry from ATL Technology Website*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Interested Service:* ${encodeURIComponent(service)}%0A*Message:* ${encodeURIComponent(message)}`;
-            
+
             // Open WhatsApp in new tab
             window.open(`https://wa.me/${waPhone}?text=${waText}`, '_blank');
-            
+
             // Reset form
             contactForm.reset();
         });
